@@ -1,0 +1,21 @@
+{
+  "name": "mock_questions",
+  "version": "1.0.0",
+  "description": "- name -> name of the question\r  - url -> url of that questions\r  - difficulty -> [easy, medium, hard]",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "mysql2": "^3.3.5",
+    "sequelize": "^6.32.0",
+    "sequelize-cli": "^6.6.1"
+  }
+}
