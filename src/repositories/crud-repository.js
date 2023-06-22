@@ -1,22 +1,49 @@
 
-class CrudRepository{
-    constructor(model){
+class CrudRepository {
+    constructor(model) {
         this.model = model
     }
 
-    async create(data){
+    async create(data) {
         try {
-            console.log(data);
-            console.log(this.model);
             const response = await this.model.create(data);
-            console.log("response", response);
-            return response;    
+            return response;
         } catch (error) {
-            console.log(error);
             throw error;
         }
     }
 
+    async getAll() {
+        try {
+            const response = await this.model.findAll();
+            return response;
+        } catch (error) {
+            throw error;
+        }
+    }
+
+    async destroy(id){
+        try {
+            const response = await this.model.destroy({
+                where: {id: id}
+            });
+            return response
+        } catch (error) {
+            throw error;
+        }
+    }
+    async update(id, data){
+        try {
+            const response = await this.model.update(data, {
+                where: {
+                    id: id
+                }
+            })
+            return response;
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
 
