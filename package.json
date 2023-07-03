@@ -2,7 +2,7 @@
   "name": "mock_questions",
   "version": "1.0.0",
   "description": "- name -> name of the question\r  - url -> url of that questions\r  - difficulty -> [easy, medium, hard]",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"

@@ -19,7 +19,7 @@ async function createQuestion(req, res) {
 
 async function getAllQuestion(req, res) {
     try {
-        const response = await QuestionService.getAllQuestion(req.body.offSet, req.body.limit);
+        const response = await QuestionService.getAllQuestion(req.query.offSet, req.query.limit);
         SuccessResponse.data = response;
 
         return res.status(201).json(SuccessResponse);
