@@ -11,9 +11,9 @@ async function createQuestion(data) {
         throw error;
     }
 }
-async function getAllQuestion() {
+async function getAllQuestion(offset, limit) {
     try {
-        const response = await questionRepository.getAll();
+        const response = await questionRepository.getAll(offset, limit);
         return response;
     } catch (error) {
         console.log(error);
