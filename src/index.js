@@ -16,7 +16,7 @@ app.use('/api', Routes)
 
 
 app.listen(PORT, async ()=>{
-    console.log(`Server is running on ${PORT}`)
+    console.log(`Server is running on ${PORT}`);
     await database();
     console.log("Database connected");
 })

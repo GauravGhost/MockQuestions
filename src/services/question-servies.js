@@ -7,8 +7,7 @@ async function createQuestion(data) {
         const response = await questionRepository.create(data);
         return response;
     } catch (error) {
-        console.log(error);
-        throw error;
+        throw new Error("Bad Request");
     }
 }
 async function getAllQuestion(offset, limit) {
@@ -16,8 +15,7 @@ async function getAllQuestion(offset, limit) {
         const response = await questionRepository.getAll(offset, limit);
         return response;
     } catch (error) {
-        console.log(error);
-        throw error;
+        throw new Error("Bad Request");
     }
 }
 
@@ -26,17 +24,16 @@ async function deleteQuestion(id) {
         const response = await questionRepository.destroy(id);
         return response;
     } catch (error) {
-        console.log(error);
-        throw error;
+        throw new Error("Bad Request");
     }
 }
 
-async function updateQuestion(id, data){
-    try{
+async function updateQuestion(id, data) {
+    try {
         const response = await questionRepository.update(id, data);
         return response;
-    } catch (error){
-        throw error;
+    } catch (error) {
+        throw new Error("Bad Request");
     }
 }
 

@@ -4,7 +4,6 @@ const { ErrorResponse, SuccessResponse } = require('../utils/common')
 
 async function createQuestion(req, res) {
     try {
-        console.log(req.body);
         const question = await QuestionService.createQuestion({
             name: req.body.name,
             link: req.body.link,

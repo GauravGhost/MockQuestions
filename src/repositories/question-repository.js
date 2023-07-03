@@ -7,10 +7,10 @@ class QuestionsRepository extends CrudRepository{
     }
     async getAll(offset = 0, limit = Infinity){
         try {
-            const tweet = await Question.find().skip(offset).limit(limit);
-            return tweet;
+            const question = await Question.find().skip(offset).limit(limit);
+            return question;
         } catch (error) {
-            console.log(error)
+            throw new Error("Bad Request");
         }
     }
 }
